@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Cross Browser Testing" >
+    <listeners>
+        <listener class-name="org.demoWebShop.listeners.TestListener"/>
+    </listeners>
+    <test  name="Chrome Test">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="org.demoWebShop.testscripts.HomePageTest">
+                <methods>
+                    <include name="verifyHomePageTitle"/>
+                </methods>
+            </class>
+            <class name="org.demoWebShop.testscripts.LoginPageTest">
+                <methods>
+                    <exclude name="verifyValidLogin"/>
+                </methods>
+            </class>
+            <class name="org.demoWebShop.testscripts.RegisterPageTest">
+                <methods>
+                    <exclude name="verifyRegistration"/>
+                </methods>
+            </class>
+            <class name="org.demoWebShop.testscripts.ShoppingCartTest">
+                <methods>
+                    <exclude name="verifyProductAddedInShoppingCart"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test  name="Edge Test">
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="org.demoWebShop.testscripts.HomePageTest">
+                <methods>
+                    <include name="verifyHomePageTitle"/>
+                </methods>
+            </class>
+            <class name="org.demoWebShop.testscripts.LoginPageTest">
+                <methods>
+                    <exclude name="verifyValidLogin"/>
+                </methods>
+            </class>
+            <class name="org.demoWebShop.testscripts.RegisterPageTest">
+                <methods>
+                    <exclude name="verifyRegistration"/>
+                </methods>
+            </class>
+            <class name="org.demoWebShop.testscripts.ShoppingCartTest">
+                <methods>
+                    <exclude name="verifyProductAddedInShoppingCart"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

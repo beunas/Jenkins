@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parallel Testing" parallel="tests" thread-count="2">
+    <listeners>
+        <listener class-name="org.demoWebShop.listeners.TestListener"/>
+    </listeners>
+    <test  name="Smoke Test">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="org.demoWebShop.testscripts.HomePageTest"/>
+        </classes>
+    </test>
+    <test  name="Sanity Test">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="org.demoWebShop.testscripts.RegisterPageTest"/>
+            <class name="org.demoWebShop.testscripts.ShoppingCartTest"/>
+        </classes>
+    </test>
+    <test  name="Regression Test">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="org.demoWebShop.testscripts.LoginPageTest"/>
+            <class name="org.demoWebShop.testscripts.ShoppingCartTest"/>
+        </classes>
+    </test>
+</suite>

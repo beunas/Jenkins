@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="org.demoWebShop.listeners.TestListener"/>
+<!--        <listener class-name="org.demoWebShop.analyzer.AnnotationTransformer"/>-->
+    </listeners>
+    <test  name="MyDemoWebShop Functional Test">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+<!--            <class name="org.demoWebShop.testscripts.HomePageTest"/>-->
+                <class name="org.demoWebShop.testscripts.LoginPageTest"/>
+<!--            <class name="org.demoWebShop.testscripts.RegisterPageTest"/>-->
+<!--            <class name="org.demoWebShop.testscripts.ShoppingCartTest"/>-->
+        </classes>
+    </test>
+</suite>

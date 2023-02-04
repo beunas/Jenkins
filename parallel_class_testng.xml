@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parallel class Testing" parallel="classes" thread-count="2">
+    <listeners>
+        <listener class-name="org.demoWebShop.listeners.TestListener"/>
+    </listeners>
+    <test  name="Parallel class Functional Test">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="org.demoWebShop.testscripts.HomePageTest"/>
+            <class name="org.demoWebShop.testscripts.LoginPageTest"/>
+            <class name="org.demoWebShop.testscripts.RegisterPageTest"/>
+            <class name="org.demoWebShop.testscripts.ShoppingCartTest"/>
+        </classes>
+    </test>
+</suite>
