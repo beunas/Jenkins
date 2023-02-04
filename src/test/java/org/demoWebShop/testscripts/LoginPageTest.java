@@ -22,7 +22,7 @@ public class LoginPageTest extends Base {
     ThreadLocal<ExtentTest> extentTest = TestListener.getTestInstance();
 
     @Test(priority = 1,description = "TC_002_Verification of user login ",groups = {"sanity" })
-    public void verifyValidLogin() {
+    public void verifyUserValidLogin() {
         extentTest.get().assignCategory("sanity");
         home = new HomePage(driver);
         login = home.clickOnLoginMenu();
